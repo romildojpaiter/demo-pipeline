@@ -13,6 +13,13 @@ pipeline {
             }
 		}
 		
+		stage('Performance') {
+			steps {
+                echo 'Checa performance...'
+                bat 'mvn clean verify -Pperformance'
+            }
+		}
+		
 		stage('Docker image') {
 			steps {
                 echo 'Gerando a Docker Image...'
