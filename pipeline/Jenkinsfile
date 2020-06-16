@@ -16,7 +16,7 @@ pipeline {
 		stage('Docker image') {
 			steps {
                 echo 'Gerando a Docker Image...'
-                bat 'docker image build --tag local:demo .'
+                bat 'docker image build --force-rm --tag local:demo .'
             }
 		}				
 		

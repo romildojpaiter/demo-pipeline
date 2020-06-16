@@ -189,7 +189,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">bins-especifica_ResponseTimeGraph.csv</stringProp>
+          <stringProp name="filename">../../../jmeter/results/bins-especifica_ResponseTimeGraph.csv</stringProp>
           <stringProp name="RespTimeGraph.interval">1000</stringProp>
         </ResultCollector>
         <hashTree/>
