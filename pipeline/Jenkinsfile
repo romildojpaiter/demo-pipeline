@@ -8,18 +8,23 @@ pipeline {
 	
 		stage('Build') {
 			steps {
-                echo 'Building..'
+                echo 'Construindo...'
                 bat 'mvn clean package'
             }
 		}
 		
-		stage ('Running') {
-		
+		stage('Docker image') {
 			steps {
-		    	echo 'Iniciando o Spring Boot...'
-                bat 'mvn spring-boot:run'
+                echo 'Gerando a Docker Image...'
+                bat 'docker image build --tag local:demo .'
             }
-            
+		}				
+		
+		stage ('Running image') {		
+			steps {
+                echo 'Executando a Image...'
+                bat 'docker container run -d --name demo -p 18080:18080 local:demo'
+            }            
 		}
 				
 		
