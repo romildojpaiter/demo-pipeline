@@ -13,7 +13,6 @@ pipeline {
             }
 		}
 		
-		
 		stage('Docker image') {
 			steps {
                 echo 'Gerando a Docker Image...'
@@ -21,18 +20,25 @@ pipeline {
             }
 		}				
 		
-		stage ('Running image') {		
+		stage ('Deploy Container') {		
 			steps {
-                echo 'Executando a Image...'
+                echo 'Inicia container demo...'
                 bat 'docker container run -d --name demo -p 18080:18080 local:demo'
             }            
 		}
 				
 		stage('Performance') {
 			steps {
-                echo 'Checa performance...'
+                echo 'Checa performance projeto demo...'
                 bat 'mvn clean verify -Pperformance'
             }
+		}
+		
+		stage ('Stop Container') {		
+			steps {
+                echo 'Parando o container demo...'
+                bat 'docker container stop demo'
+            }            
 		}
 		
 	}
