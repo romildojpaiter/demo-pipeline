@@ -9,7 +9,7 @@ pipeline {
 		stage('Build') {
 			steps {
                 echo 'Building..'
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
 		}
 		
@@ -17,7 +17,7 @@ pipeline {
 		
 			steps {
 		    	echo 'Iniciando o Spring Boot...'
-                sh 'mvn spring-boot:run'
+                bat 'mvn spring-boot:run'
             }
             
 		}
