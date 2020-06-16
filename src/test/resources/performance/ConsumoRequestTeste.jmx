@@ -115,7 +115,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">bins-especifica_SummaryReport.csv</stringProp>
+          <stringProp name="filename">../../../jmeter/results/bins-especifica_SummaryReport.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
@@ -152,7 +152,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">bins-especifica_AggregateGraph.csv</stringProp>
+          <stringProp name="filename">../../../jmeter/results/bins-especifica_AggregateGraph.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
@@ -227,7 +227,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">bins-especifica_ResultsTree.csv</stringProp>
+          <stringProp name="filename">../../../jmeter/results/bins-especifica_ResultsTree.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
@@ -264,7 +264,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">bins-especifica_GraphResults.csv</stringProp>
+          <stringProp name="filename">../../../jmeter/results/bins-especifica_GraphResults.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

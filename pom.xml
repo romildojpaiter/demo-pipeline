@@ -89,6 +89,8 @@
 							</execution>
 						</executions>
 						<configuration>
+						
+							<generateReports>true</generateReports>
 
 							<testFilesDirectory>${project.basedir}/src/test/resources/performance</testFilesDirectory>
 
