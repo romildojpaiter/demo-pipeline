@@ -1,0 +1,24 @@
+#!groovy
+
+pipeline {
+
+    agent {
+        node { label 'maven' }
+    }
+
+	stages {
+		
+		stage ('Running') {
+			withMaven (
+	            maven: 'M3',
+	            mavenSettingsConfig: MVN_CONFIG) {
+
+		    	echo "Iniciando o Spring Boot..."
+                sh "mvn spring-boot:run"
+            }
+            
+		}
+				
+		
+	}
+}
