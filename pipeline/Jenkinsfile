@@ -13,12 +13,6 @@ pipeline {
             }
 		}
 		
-		stage('Performance') {
-			steps {
-                echo 'Checa performance...'
-                bat 'mvn clean verify -Pperformance'
-            }
-		}
 		
 		stage('Docker image') {
 			steps {
@@ -34,6 +28,12 @@ pipeline {
             }            
 		}
 				
+		stage('Performance') {
+			steps {
+                echo 'Checa performance...'
+                bat 'mvn clean verify -Pperformance'
+            }
+		}
 		
 	}
 }
