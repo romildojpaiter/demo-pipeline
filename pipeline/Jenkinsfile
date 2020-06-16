@@ -7,14 +7,19 @@ pipeline {
     }
 
 	stages {
+	
+		stage('Build') {
+			steps {
+                echo 'Building..'
+                sh 'mvn clean package'
+            }
+		}
 		
 		stage ('Running') {
-			withMaven (
-	            maven: 'M3',
-	            mavenSettingsConfig: MVN_CONFIG) {
-
-		    	echo "Iniciando o Spring Boot..."
-                sh "mvn spring-boot:run"
+		
+			steps {
+		    	echo 'Iniciando o Spring Boot...'
+                sh 'mvn spring-boot:run'
             }
             
 		}
